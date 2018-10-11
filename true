@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20181011160138_change_column_genre_name.rb
