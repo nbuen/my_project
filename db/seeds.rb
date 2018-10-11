@@ -20,11 +20,11 @@ Review.destroy_all
 			title_book = Book.create(title: Faker::Book.unique.title,
 				author: Faker::Book.author,
 				publisher: Faker::Book.publisher,
-				genre_name: title_genre)
+				genre_name: title_genre[:title])
 			5.times {
 				Review.create(title: Faker::Lorem.unique.sentence(3),
 					comment: Faker::Lorem.paragraphs(1),
-					book_title: title_book)
+					book_title: title_book[:title])
 			}
 		}
 }

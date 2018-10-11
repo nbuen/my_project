@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
 	def index
-		@books = Book.order(:title)
+		@books = Book.all
+		@genre = Genre.all
 	end
 end
