@@ -1,0 +1,15 @@
+## Intro Project - Full Stack ##
+
+- This is my intro project for full stack web development called iBooks. It is a web app that displays a collection of books and stores.
+
+## Data Structure ##
+
+- I used Faker to generate all the data I need to my database.
+
+- Faker::Book - used for Book Table
+
+- Faker::Book.genre - Used for Genre Table
+
+- Faker::Address - Used for Store full_address and latitude/longitude
+
+- Faker::Coffee - Used name for Store name
