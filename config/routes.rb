@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'stores/index'
   get 'book/index/:id' => 'book#index', as: 'book'
   get 'about/index'
   get 'book/lists' => 'startup#index'
