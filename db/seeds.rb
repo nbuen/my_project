@@ -7,7 +7,7 @@ Genre.destroy_all
 Book.destroy_all
 Review.destroy_all
 
-10.times {
+100.times {
 	Store.create(name: Faker::Coffee.unique.blend_name,
 			address: Faker::Address.full_address,
 			latitude: Faker::Address.latitude,
