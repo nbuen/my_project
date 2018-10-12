@@ -10,5 +10,24 @@
 			<hr>
 			<small>Last update: <%= @book.updated_at %></small>
 		</div>
+	</div>
+	<div class="row">	
+	<% if @reviews.count > 0 %>
+	<div class="deal-container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
+	<h1>Reviews</h1>
+	<hr>
+		<% @reviews.each do |review| %>			
+			<h3><%= review.title %></h3>
+			<small>Created at: <%= review.created_at %></small>					
+			<p><%= review.comment %></p>
+			<hr>			
+		<% end %>
 	</div>	
+	<% else %>
+		<div class="container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
+			<h1>No Reviews Available</h1>
+		</div>
+	<% end %>
+	</div>
 </div>
+		
