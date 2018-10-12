@@ -9,5 +9,10 @@
 			<small>Category: <%= book.genre_name %></small>
 		</div>
 		<% end %>
-	</div>		         
+	</div>
+	<div class="row mt-2 justify-content-center align-items-center">
+		<ul class="pagination">
+			<%= paginate @books %>	
+		</ul>		
+	</div>       
 </div>
