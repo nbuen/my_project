@@ -2,11 +2,9 @@
 	<div class="row" >        
 		<% @books.each do |book| %>
 		<div class="deal-container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
-			<h2 class="text-truncate"><a  href="#"><%= book.title %></a></h2>
+			<%= link_to book.title, book_path(book.id), :class => "text-truncate h2" %>
 			<hr>
-			<small>Author: <%= book.author %></small><br>
-			<small>Publisher: <%= book.publisher %></small><br>
-			<small>Category: <%= book.genre_name %></small>
+			<small>By: <%= book.author %></small>
 		</div>
 		<% end %>
 	</div>
