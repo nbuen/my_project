@@ -1,11 +1,17 @@
 <div class="container col-md-12 col-lg-8">
-	<div class="row" >        
-		<% @books.each do |book| %>
-		<div class="deal-container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
-			<%= link_to book.title, book_path(book.id), :class => "text-truncate h2" %>
-			<hr>
-			<small>By: <%= book.author %></small>
-		</div>
+	<div class="row" >
+		<% if @books.count > 0 %>
+			<% @books.each do |book| %>
+				<div class="container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
+					<%= link_to book.title, book_path(book.id), :class => "text-truncate h2" %>
+					<hr>
+					<small>By: <%= book.author %></small>
+				</div>
+			<% end %>
+		<% else %>
+			<div class="container col-md-12 col-lg-4 border shadow-sm p-3 bg-light rounded m-0 mt-2 mx-auto">
+				<h1>No Book Available</h1>
+			</div>
 		<% end %>
 	</div>
 	<div class="row mt-2 justify-content-center align-items-center">
